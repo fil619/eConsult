@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" :class="IsDark ? 'dark' : 'light'" >
+    <main class="h-screen bg-gray-100 dark:bg-gray-900" >
+      <main-page  :IsDark="IsDark"/>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainPage from './components/MainPage.vue'
 
 export default {
   name: 'App',
+  computed:{
+    IsDark(){
+      return this.$store.state.IsDark
+    }
+  },
   components: {
-    HelloWorld
-  }
+    MainPage
+  },
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Josefin;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+@font-face {
+  font-family: "Josefin";
+  src: local("Josefin"),
+   url(./fonts/font.ttf) format("truetype");
 }
 </style>
