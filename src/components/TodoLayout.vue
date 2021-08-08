@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class="h-2 bg-gray-600 opacity-25" >
+        <div class="h-2 bg-gray-600 bg-opacity-5" >
 
         </div>
       </div>

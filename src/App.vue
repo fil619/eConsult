@@ -1,6 +1,6 @@
 <template>
   <div id="app" :class="IsDark ? 'dark' : 'light'" >
-    <main class="h-screen bg-gray-100 dark:bg-gray-900" >
+    <main class="h-screen bg-very-light-grayish-blue dark:bg-very-dark-blue" >
       <main-page  :IsDark="IsDark"/>
     </main>
   </div>

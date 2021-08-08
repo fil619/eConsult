@@ -2,12 +2,11 @@
   File Name: AddTodo.vue
   Description: CheckBox to Select All Todos , Add a New Todo
 ========================================================================================== -->
-
 <template>
     <div>
         
       <div
-        class="w-full mx-auto flex flex-row rounded bg-white text-gray-600 dark:text-white  dark:bg-gray-800 shadow-lg p-3 text-gray-800  overflow-hidden"
+        class="w-full mx-auto flex flex-row rounded bg-white  dark:text-white  dark:bg-dark-desaturated-blue shadow-lg p-3   overflow-hidden"
       >
         <div class="self-center">
           <base-checkbox :val="SelectAll" @UpdateTodo="SelectAllTodoMethod" />
@@ -18,7 +17,7 @@
             v-model="Todo"
             type="text"
             id="todo"
-            class="py-2 text-sm text-white bg-white w-full dark:bg-gray-800 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900"
+            class="py-2 text-sm  bg-white w-full dark:bg-dark-desaturated-blue rounded-md pl-10  focus:outline-none "
             placeholder="Create a new todo..."
           />
         </div>

@@ -17,7 +17,7 @@
       <div
         v-for="todo in FilteredNames"
         :key="todo.id"
-        class="p-3 cursor-pointer border-b border-gray-200 dark:bg-gray-800 bg-white"
+        class="p-3 cursor-pointer border-b border-gray-200 dark:bg-dark-desaturated-blue bg-white"
       >
         <todo-item :todo="todo" />
       </div>
