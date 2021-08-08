@@ -23,15 +23,16 @@
     </div>
 
     <div class="w-full flex-none items-center justify-center">
-      <add-todo />
+      <add-todo @ScrollToTop="ScrollToTop" />
     </div>
 
     <div class="flex-grow h-40">
-      <div class="flex flex-col h-full">
+      <div class="flex flex-col h-full" >
         <div
-          class="flex-grow bg-white dark:bg-gray-800 overflow-y-auto hide-scrollbar "
+          id="scroll-to-top"
+          class="flex-grow bg-white dark:bg-gray-800 overflow-y-auto  hide-scrollbar rounded-t-xl"
         >
-          <TodoDragLayout />
+          <todo-drag-layout />
         </div>
 
         <div
@@ -50,12 +51,15 @@
 
             <div class="self-center">
               <a
-                class="cursor-pointer hover:text-gray-700 dark:hover:text-gray-100"
+                class="cursor-pointer hover:text-gray-700 text-sm dark:hover:text-gray-100"
                 @click="ClearTodoList"
                 >Clear All</a
               >
             </div>
           </div>
+        </div>
+        <div class="h-2 bg-gray-600 opacity-25" >
+
         </div>
       </div>
     </div>
@@ -95,6 +99,11 @@ export default {
       "ToggleTheme",
       "ClearTodoList",
     ]),
+    ScrollToTop(){
+      var myDiv = document.getElementById('scroll-to-top');
+      myDiv.style['scroll-behavior'] = 'smooth';
+      myDiv.scrollTop = 0;
+    }
   },
   components: { 
     TodoDragLayout,

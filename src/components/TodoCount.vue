@@ -4,7 +4,7 @@
 ========================================================================================== -->
 
 <template functional >
-    <span>{{props.Count}} items left</span>
+    <span class="text-sm" >{{props.Count}} items left</span>
 </template>
 
 <script>

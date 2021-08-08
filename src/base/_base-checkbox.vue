@@ -1,7 +1,7 @@
 <template>
 <div>
 
-  <div class="item rounded-full" style="padding:1.5px" @click="$emit('UpdateTodo')">
+  <div class="item rounded-full" style="padding:1.5px" @click="EmitEvent">
     <div
       class="rounded-full h-5 w-5 flex items-center justify-center border-2 cursor-pointer"
       :class="val ? 'checkbox-gradient' : 'bg-white'"
@@ -35,8 +35,7 @@ export default {
     },
   },
   methods: {
-    Update() {
-      console.log("Update");
+    EmitEvent() {
       this.$emit("UpdateTodo");
     },
   },

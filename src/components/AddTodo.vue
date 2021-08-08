@@ -18,7 +18,7 @@
             v-model="Todo"
             type="text"
             id="todo"
-            class="w-full pl-3 pr-10 py-2 bg-white text-gray-600 dark:text-white  dark:bg-gray-800  hover:border-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
+            class="py-2 text-sm text-white bg-white w-full dark:bg-gray-800 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900"
             placeholder="Create a new todo..."
           />
         </div>
@@ -60,6 +60,7 @@ export default {
       if (this.Todo.length > 2) {
         this.AddTodoList(this.Todo);
         this.Todo = "";
+        this.$emit('ScrollToTop')
         this.show = false;
       } else {
         this.show = true;

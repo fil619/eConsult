@@ -4,7 +4,7 @@
 ========================================================================================== -->
 
 <template>
-    <li class="flex justify-between items-center main-element mt-3">
+    <li class="flex justify-between m-0 sm:m-3 items-center main-element mt-1">
           <div class="flex items-center" :class="{ 'line-through': false }">
                 <base-checkbox  :val.sync="todo.IsComplete" @UpdateTodo="ToggleTodoItem(todo)" />
             <div
@@ -35,9 +35,6 @@ export default {
         todo :{
             type : Object
         },
-        id:{
-          type : Number
-        }
     },
     methods: {
      ...mapMutations (['TodoCompleted','DeleteTodo']),
