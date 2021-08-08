@@ -35,7 +35,7 @@
         </div>
 
         <div
-          class="bg-white  dark:bg-gray-800 flex-none h-14 rounded-bl text-gray-500 border-t border-gray-200"
+          class="bg-white  dark:bg-gray-800 flex-none h-14 rounded-b text-gray-500 border-t border-gray-200"
         >
           <div class="grid grid-cols-2 sm:grid-cols-4 h-full gap-4">
             <div
