@@ -5,8 +5,10 @@
 
 <template>
   <div class="flex flex-col justify-center items-center h-screen w-full mx-auto">
-    <div :style="{'background-image': `url(${require(`../assets/${BackGroundImage}`)})`}" class="bg-gray-300 h-64 w-full  flex-none shadow-md bg-cover bg-center"
-    ></div>
+    <!-- Show Desktop Background Image -->
+    <div  :style="{'background-image': `url(${require(`../assets/${BackGroundImage}`)})`}" class="hidden sm:block bg-gray-300 h-64 w-full  flex-none shadow-md bg-cover bg-center"></div>
+    <!-- Show Mobile Background Image -->
+    <div :style="{'background-image': `url(${require(`../assets/${BackGroundImageMobile}`)})`}" class="block sm:hidden bg-gray-300 h-64 w-full  flex-none shadow-md bg-cover bg-center"></div>
     <div class="w-11/12 sm:w-4/6 md:w-5/12 -mt-56 rounded-lg flex-grow overflow-hidden">
       <todo-layout />
     </div>
@@ -24,6 +26,9 @@ export default {
   computed:{
     BackGroundImage(){
       return this.$store.state.IsDark ? 'bg-desktop-dark.jpg' : 'bg-desktop-light.jpg'
+    },
+     BackGroundImageMobile(){
+      return this.$store.state.IsDark ? 'bg-mobile-dark.jpg' : 'bg-mobile-light.jpg'
     }
   }
 };
